@@ -1,11 +1,22 @@
 import pandas as pd
 from file_reader import file_reader
 
+"""
+Analyzes a CSV file and provides a statistical summary using pandas.
+
+Args:
+    file_path (str): The relative path to the CSV file to be analyzed. 
+                      The file is expected to be located in the 'data' directory.
+
+Returns:
+    pandas.DataFrame: The statistical summary of the CSV data, including count, 
+                       mean, std, min, max for numeric columns, and unique values 
+                       for categorical columns.
+"""
 def analyze_csv(file_path):
-    # Read data using file_reader
+    
     raw_data = file_reader(file_path)
 
-    # Convert raw data (list of lists) to DataFrame
     if isinstance(raw_data, list):
         try:
             df = pd.DataFrame(raw_data[1:], columns=raw_data[0])
@@ -16,13 +27,10 @@ def analyze_csv(file_path):
         print("Error: Unsupported data format.")
         return None
 
-    # Convert numeric columns to proper datatypes
     for col in df.columns:
         try:
             df[col] = pd.to_numeric(df[col], errors='ignore')
         except ValueError:
             pass
 
-    # Generate summary statistics
-    print("Statistical Summary:")
-    print(df.describe(include='all'))
+    return df.describe(include='all')
