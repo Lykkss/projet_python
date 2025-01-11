@@ -2,6 +2,17 @@ import csv
 import os
 
 def file_reader(file_path):
+    '''
+    Reads a CSV file and returns its content as a list of rows.
+
+    Args:
+        file_path (str): The relative path to the CSV file.
+
+    Returns:
+        data: A list of rows, where each row is a type of values.
+        str: An error message if the file is empty.
+        ValueError: If the file does not exist or is not a CSV file.
+    '''
     file_path = 'data/' + file_path
     if not os.path.exists(file_path):
         return ValueError('File does not exist.')
