@@ -8,7 +8,6 @@ def analyze_csv(file_path):
     # Convert raw data (list of lists) to DataFrame
     if isinstance(raw_data, list):
         try:
-            # Assume the first row contains headers
             df = pd.DataFrame(raw_data[1:], columns=raw_data[0])
         except IndexError:
             print("Error: The CSV file seems to be empty or malformed.")
@@ -27,8 +26,3 @@ def analyze_csv(file_path):
     # Generate summary statistics
     print("Statistical Summary:")
     print(df.describe(include='all'))
-
-# Example usage
-if __name__ == "__main__":
-    file_name = "your_file.csv"  # Replace with your CSV file name
-    analyze_csv(file_name)
