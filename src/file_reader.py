@@ -9,9 +9,10 @@ def file_reader(file_path):
         return ValueError('Invalid file format. Only CSV files are supported.')
     data = []
     with open(file_path, 'r') as file:
-        if len(file.readlines()) == 0:
-            return FileNotFoundError('Empty file.')
-        csv_reader = csv.reader(file)
+        content = file.read()
+        if len(content) == 0:
+            return "File is empty"
+        csv_reader = csv.reader(content.splitlines())
         for row in csv_reader:
             data.append(row)
     return data
