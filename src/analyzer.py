@@ -29,7 +29,7 @@ def analyze_csv(file_path):
 
     for col in df.columns:
         try:
-            df[col] = pd.to_numeric(df[col], errors='ignore')
+            df[col] = pd.to_numeric(df[col])
         except ValueError:
             pass
 
