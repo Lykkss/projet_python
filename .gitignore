@@ -1,0 +1,51 @@
+# Ignorer les fichiers de données
+data/
+*.csv
+*.tsv
+
+# Ignorer les fichiers de logs
+*.log
+
+# Ignorer les fichiers générés par Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignorer les fichiers d'environnement virtuel
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# Ignorer les fichiers de configuration de l'IDE
+.vscode/
+.idea/
+*.iml
+
+# Ignorer les fichiers de Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignorer les fichiers générés par les tests
+.coverage
+*.coverage.*
+*.pytest_cache/
+htmlcov/
+
+# Ignorer les fichiers spécifiques à Streamlit
+.streamlit/
+
+# Ignorer les fichiers temporaires du système
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers générés par l'utilisateur
+*.bak
+*.swp
+*.tmp
+
+# Ignorer les dépendances pipenv ou poetry (optionnel)
+Pipfile
+Pipfile.lock
+poetry.lock
