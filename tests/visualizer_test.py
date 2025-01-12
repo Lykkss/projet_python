@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 
-# Ajouter le dossier src au PYTHONPATH
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
 from visualizer import plot_histogram, plot_trend, plot_interactive_trend
@@ -50,7 +50,7 @@ def test_plot_interactive_trend():
     print("✅ test_plot_interactive_trend passé avec succès.")
 
 if __name__ == "__main__":
-    # Exécution des tests
+ 
     test_plot_histogram()
     test_plot_trend()
     test_plot_interactive_trend()
