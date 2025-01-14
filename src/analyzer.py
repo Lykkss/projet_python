@@ -1,5 +1,5 @@
 import pandas as pd
-from file_reader import file_reader
+from .file_reader import file_reader
 
 """
 Analyzes a CSV file and provides a statistical summary using pandas.
