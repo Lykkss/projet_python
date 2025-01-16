@@ -139,5 +139,5 @@ else:
 
 st.markdown("---")
 st.markdown(
-    "💡 Développé par Lina, Yaël, Lisa"
+    "💡 Développé par Nicolas, Yaël, Lisa"
 )
