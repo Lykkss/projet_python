@@ -34,22 +34,17 @@ https://lykkss-projet-python-app-sczaoz.streamlit.app/
 
 ## Diagram
 
-            +---------------------+
-            |       app.py        |
-            | - Interface Streamlit|
-            | - Appelle les modules|
-            +---------------------+
+            +----------------+
+            |     app.py     |
+            +----------------+
                      |
-     +---------------+---------------+
-     |                               |
-+------------+              +----------------+
-| file_reader |              |   analyzer.py  |
-| - Charge CSV |              | - Analyse stats |
-+------------+              +----------------+
+       +---------------------------+
+       |        src/               |
+       +---------------------------+
+       | file_reader.py  analyzer.py|
+       | visualizer.py              |
+       +---------------------------+
                      |
-            +---------------------+
-            |    visualizer.py    |
-            | - Génère graphiques |
-            +---------------------+
-
-
+            +----------------+
+            |      data/      |
+            +----------------+
