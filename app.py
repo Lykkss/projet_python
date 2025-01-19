@@ -89,7 +89,7 @@ if df1 is not None and df2 is not None:
     numeric_columns1 = df1.select_dtypes(include=["float64", "int64"]).columns
     numeric_columns2 = df2.select_dtypes(include=["float64", "int64"]).columns
 
-    common_numeric_columns = list(set(numeric_columns1) & set(numeric_columns2))
+    common_numeric_columns = set(numeric_columns1) & set(numeric_columns2)
     if len(common_numeric_columns) > 0:
         selected_columns = st.multiselect(
             "Choisissez des colonnes numériques à comparer",
